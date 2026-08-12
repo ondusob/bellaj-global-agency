@@ -1,0 +1,525 @@
+/* =========================
+ RESET & BASE
+========================= */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+
+body {
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+ line-height: 1.6;
+ color: #2d3748;
+ background-color: #f7fafc;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+}
+
+a {
+ text-decoration: none;
+ color: inherit;
+}
+
+/* =========================
+ NAVIGATION
+========================= */
+.navbar {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0.9rem 5%;
+ background-color: #1a365d;
+ color: white;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo img {
+ height: 45px;
+ width: auto;
+}
+
+.nav-links {
+ display: flex;
+ list-style: none;
+ gap: 2rem;
+}
+
+.nav-links a {
+ color: white;
+ font-weight: 500;
+ font-size: 0.95rem;
+ transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+ color: #90cdf4;
+}
+
+. menu-toggle {
+ display: none;
+ font-size: 1.8rem;
+ cursor: pointer;
+ user-select: none;
+}
+
+/* =========================
+ HERO
+========================= */
+.hero {
+ background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+ color: white;
+ text-align: center;
+ padding: 5.5rem 1.5rem;
+}
+
+.hero-content {
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+.hero-content h1 {
+ font-size: 2.6rem;
+ font-weight: 700;
+ line-height: 1.25;
+ margin-bottom: 1.2rem;
+}
+
+.hero-content p {
+ font-size: 1.2rem;
+ opacity: 0.95;
+ max-width: 580px;
+ margin: 0 auto 2.2rem;
+}
+
+.hero-buttons {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 1rem;
+}
+
+/* =========================
+ BUTTONS
+========================= */
+.btn {
+ display: inline-block;
+ background-color: #38a169;
+ color: white;
+ padding: 0.85rem 1.9rem;
+ border-radius: 6px;
+ font-weight: 600;
+ font-size: 1rem;
+ border: none;
+ cursor: pointer;
+ transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+ background-color: #2f855a;
+ transform: translateY(-2px);
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+ background-color: transparent;
+ border: 2px solid white;
+ color: white;
+}
+
+.btn-outline:hover {
+ background-color: white;
+ color: #1a365d;
+}
+
+/* =========================
+ POSTER
+========================= */
+.poster-section {
+ padding: 3rem 5%;
+ background: #ffffff;
+ display: flex;
+ justify-content: center;
+}
+
+.poster-container {
+ width: 100%;
+ max-width: 900px;
+}
+
+.advert-poster {
+ width: 100%;
+ border-radius: 12px;
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advert-poster:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+ SECTIONS
+========================= */
+.section {
+ padding: 4.5rem 5%;
+ max-width: 1150px;
+ margin: 0 auto;
+}
+
+.section h2 {
+ text-align: center;
+ font-size: 2.1rem;
+ font-weight: 700;
+ margin-bottom: 2.8rem;
+ color: #1a365d;
+ position: relative;
+}
+
+.section h2::after {
+ content: "";
+ display: block;
+ width: 60px;
+ height: 3px;
+ background: #2b6cb0;
+ margin: 0.8rem auto 0;
+ border-radius: 2px;
+}
+
+/* =========================
+ CARDS (Services)
+========================= */
+.cards {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 1.8rem;
+}
+
+.card {
+ background: white;
+ padding: 2rem 1.8rem;
+ border-radius: 10px;
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+ border: 1px solid #e2e8f0;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ height: 100%;
+}
+
+.card:hover {
+ transform: translateY(-6px);
+ box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+ color: #2b6cb0;
+ font-size: 1.25rem;
+ margin-bottom: 0.9rem;
+}
+
+.card p {
+ color: #4a5568;
+ font-size: 0.98rem;
+ margin-bottom: 0.7rem;
+}
+
+.card p:last-child {
+ margin-bottom: 0;
+}
+
+/* =========================
+ JOBS
+========================= */
+.jobs-section {
+ background-color: #edf2f7;
+ max-width: none;
+ padding-left: 0;
+ padding-right: 0;
+}
+
+.jobs-section .section,
+.jobs-section h2 {
+ max-width: 1150px;
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 5%;
+ padding-right: 5%;
+}
+
+.job-list {
+ display: grid;
+ gap: 1.2rem;
+ max-width: 1150px;
+ margin: 0 auto;
+ padding: 0 5%;
+}
+
+.job {
+ background: white;
+ padding: 1.4rem 1.8rem;
+ border-radius: 10px;
+ box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: 1.5rem;
+ border: 1px solid #e2e8f0;
+ transition: box-shadow 0.25s ease;
+}
+
+.job:hover {
+ box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.job-info h3 {
+ color: #1a365d;
+ font-size: 1.15rem;
+ margin-bottom: 0.25rem;
+}
+
+.job-info p {
+ color: #718096;
+ font-size: 0.95rem;
+}
+
+.btn-small {
+ background-color: #2b6cb0;
+ color: white;
+ padding: 0.55rem 1.3rem;
+ border-radius: 5px;
+ font-size: 0.9rem;
+ font-weight: 600;
+ white-space: nowrap;
+ transition: background 0.25s ease;
+}
+
+.btn-small:hover {
+ background-color: #2c5282;
+}
+
+/* =========================
+ ABOUT
+========================= */
+.about-content {
+ max-width: 780px;
+ margin: 0 auto;
+ text-align: center;
+}
+
+.about-content p {
+ font-size: 1.1rem;
+ color: #4a5568;
+ margin-bottom: 1.3rem;
+ line-height: 1.7;
+}
+
+/* =========================
+ CONTACT
+========================= */
+.contact-section {
+ background-color: #edf2f7;
+ max-width: none;
+}
+
+.contact-section h2 {
+ max-width: 1150px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.contact-form {
+ max-width: 560px;
+ margin: 0 auto;
+ background: white;
+ padding: 2.2rem;
+ border-radius: 12px;
+ box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+ border: 1px solid #e2e8f0;
+}
+
+.form-group {
+ margin-bottom: 1.3rem;
+}
+
+.form-group label {
+ display: block;
+ margin-bottom: 0.4rem;
+ font-weight: 600;
+ font-size: 0.95rem;
+ color: #2d3748;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+ width: 100%;
+ padding: 0.75rem 0.9rem;
+ border: 1px solid #cbd5e0;
+ border-radius: 6px;
+ font-size: 1rem;
+ font-family: inherit;
+ transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+ outline: none;
+ border-color: #2b6cb0;
+ box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+}
+
+.form-group textarea {
+ resize: vertical;
+ min-height: 120px;
+}
+
+.contact-form .btn {
+ width: 100%;
+ margin-top: 0.5rem;
+}
+
+.form-message {
+ text-align: center;
+ margin-top: 1.2rem;
+ font-weight: 600;
+ min-height: 1.5em;
+}
+
+/* =========================
+ FOOTER
+========================= */
+footer {
+ background-color: #1a365d;
+ color: #e2e8f0;
+ text-align: center;
+ padding: 2.2rem 1.5rem;
+}
+
+footer p {
+ margin: 0.4rem 0;
+ font-size: 0.95rem;
+}
+
+footer a {
+ color: #90cdf4;
+ transition: color 0.2s ease;
+}
+
+footer a:hover {
+ color: white;
+}
+
+/* =========================
+ RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+ .nav-links {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 100%;
+ left: 0;
+ width: 100%;
+ background-color: #1a365d;
+ padding: 0.8rem 0;
+ text-align: center;
+ gap: 0;
+ box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+ }
+
+ .nav-links li {
+ padding: 0.85rem 0;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+ }
+
+ .nav-links.active {
+ display: flex;
+ }
+
+ .menu-toggle {
+ display: block;
+ }
+
+ .hero {
+ padding: 4rem 1.2rem;
+ }
+
+ .hero-content h1 {
+ font-size: 1.9rem;
+ }
+
+ .hero-content p {
+ font-size: 1.05rem;
+ }
+
+ .section {
+ padding: 3.5rem 5%;
+ }
+
+ .section h2 {
+ font-size: 1.75rem;
+ }
+
+ .job {
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 1rem;
+ }
+
+ .btn-small {
+ align-self: flex-start;
+ }
+}
+
+@media (max-width: 480px) {
+ .navbar {
+ padding: 0.75rem 4%;
+ }
+
+ .logo img {
+ height: 40px;
+ }
+
+ .hero-content h1 {
+ font-size: 1.65rem;
+ }
+
+ .hero-buttons {
+ flex-direction: column;
+ align-items: center;
+ }
+
+ .hero-buttons .btn {
+ width: 100%;
+ max-width: 280px;
+ text-align: center;
+ }
+
+ .poster-section {
+ padding: 2rem 4%;
+ }
+
+ .advert-poster {
+ border-radius: 8px;
+ }
+
+ .contact-form {
+ padding: 1.6rem;
+ }
+
+ .cards {
+ grid-template-columns: 1fr;
+ }
+}

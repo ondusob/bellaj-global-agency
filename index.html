@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Bellaj Global Agency | Recruitment & Career Consultancy</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+ <nav class="navbar">
+ <div class="logo">
+ <img src="images/logo.jpeg" alt="Bellaj Global Agency Logo" height="45">
+ </div>
+
+ <ul class="nav-links" id="navLinks">
+ <li><a href="#home">Home</a></li>
+ <li><a href="#services">Services</a></li>
+ <li><a href="#jobs">Jobs</a></li>
+ <li><a href="#about">About</a></li>
+ <li><a href="#contact">Contact</a></li>
+ </ul>
+
+ <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</div>
+ </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+ <div class="hero-content">
+ <h1>Connecting Top Talent with Great Companies</h1>
+ <p>
+ We help businesses find the right people
+ and help candidates find meaningful careers.
+ </p>
+ <div class="hero-buttons">
+ <a href="#jobs" class="btn">View Open Positions</a>
+ <a href="#contact" class="btn btn-outline">Contact Us</a>
+ </div>
+ </div>
+</section>
+
+<!-- ADVERTISING POSTER -->
+<section class="poster-section">
+ <div class="poster-container">
+ <img src="images/poster.jpeg"
+ alt="Bellaj Global Agency Recruitment Services"
+ class="advert-poster">
+ </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+ <h2>Our Services</h2>
+ <div class="cards">
+ <div class="card">
+ <h3>Permanent Recruitment</h3>
+ <p>We find the best full-time candidates for your company across multiple industries.</p>
+ </div>
+
+ <div class="card">
+ <h3>Contract Staffing</h3>
+ <p>Flexible short-term and long-term contract placements when you need them.</p>
+ </div>
+
+ <div class="card">
+ <h3>Executive Search</h3>
+ <p>Specialized search for senior leadership and hard-to-fill roles.</p>
+ <p><strong>Talent Mapping & Market Research</strong> – Identifying and assessing potential candidates within specific industries.</p>
+ <p><strong>Employer-Candidate Matching</strong> – Connecting organizations with carefully screened candidates.</p>
+ </div>
+
+ <div class="card">
+ <h3>Career Coaching</h3>
+ <p>We help candidates improve their CVs, interview skills, and career path.</p>
+ </div>
+ </div>
+</section>
+
+<!-- JOBS -->
+<section id="jobs" class="section jobs-section">
+ <h2>Featured Jobs</h2>
+ <div class="job-list">
+ <div class="job">
+ <div class="job-info">
+ <h3>Drivers & Transportation</h3>
+ <p>Full-time and Contractual</p>
+ </div>
+ <a href="#contact" class="btn-small">Apply Now</a>
+ </div>
+
+ <div class="job">
+ <div class="job-info">
+ <h3>Care and Support Services</h3>
+ <p>Full-time, Part-time & Contractual</p>
+ </div>
+ <a href="#contact" class="btn-small">Apply Now</a>
+ </div>
+
+ <div class="job">
+ <div class="job-info">
+ <h3>Cleaning and Facilities Services</h3>
+ <p>Full-time</p>
+ </div>
+ <a href="#contact" class="btn-small">Apply Now</a>
+ </div>
+
+ <div class="job">
+ <div class="job-info">
+ <h3>Hospitality and Catering</h3>
+ <p>Contractual</p>
+ </div>
+ <a href="#contact" class="btn-small">Apply Now</a>
+ </div>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+ <h2>About Bellaj Global Agency</h2>
+ <div class="about-content">
+ <p>
+ BELLAJ Global Agency is a professional recruitment
+ and career consultancy agency dedicated to connecting
+ skilled and qualified individuals with legitimate
+ employment opportunities locally and internationally.
+ </p>
+ <p>
+ We support job seekers throughout the recruitment
+ process, from career guidance and job matching to
+ application support and documentation. Our focus is
+ on creating reliable connections between candidates
+ and employers while promoting transparency,
+ professionalism, and ethical recruitment practices.
+ </p>
+ <p>
+ At BELLAJ Global Agency, we believe that the right
+ opportunity can transform a career and build a
+ better future.
+ </p>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+ <h2>Get In Touch</h2>
+
+ <form class="contact-form"
+ id="contactForm"
+ action="https://formspree.io/f/xljrjwbr"
+ method="POST">
+
+ <div class="form-group">
+ <label for="name">Your Name</label>
+ <input type="text" id="name" name="name" required>
+ </div>
+
+ <div class="form-group">
+ <label for="email">Email</label>
+ <input type="email" id="email" name=" email" required>
+ </div>
+
+ <div class="form-group">
+ <label for="type">I am a...</label>
+ <select id="type" name="type">
+ <option value="candidate">Job Seeker</option>
+ <option value="employer">Employer</option>
+ </select>
+ </div>
+
+ <div class="form-group">
+ <label for="message">Message</label>
+ <textarea id="message" name="message" rows="5" required></textarea>
+ </div>
+
+ <input type="hidden" name="_subject" value="New Contact Message - Bellaj Global Agency">
+ <input type="text" name="_gotcha" style="display:none">
+
+ <button type="submit" class="btn">Send Message</button>
+ </form>
+
+ <p id="formMessage" class="form-message"></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+ <p>&copy; 2026 Bellaj Global Agency. All rights reserved.</p>
+ <p>
+ Email: <a href="mailto:ondusob@gmail.com">ondusob@gmail.com</a>
+ &nbsp;|&nbsp;
+ Phone: <a href="tel:+254717741400">+254 717741400</a>
+ </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
